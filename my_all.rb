@@ -1,4 +1,4 @@
-def my_all(collection)
+def my_all?(collection)
   i=0
   all = []
   while i < collection.length
@@ -6,9 +6,11 @@ def my_all(collection)
     i+=1
   end
 
-  if all.include? false
+  if all.include?false
     false
   else
     true
   end
 end
+collection=[1,2,3]
+my_all?(collection) {|i| i < 2}
