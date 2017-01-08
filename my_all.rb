@@ -1,14 +1,13 @@
-def my_all(collection)
-  i=0
-  all = []
-  while i < collection.length
-    all << yield(collection[i])
-    i+=1
+def my_all?(array)
+  counter=0
+  res=[]
+  while counter<array.size
+    res<<yield(array[counter])
+    counter+=1
   end
-
-  if all.include? false
-    false
-  else
-    true
-  end
+   if res.include?(false)
+     false
+   else
+     true
+   end
 end
